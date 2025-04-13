@@ -1,6 +1,6 @@
 # EAG-Session-5-Assignment
 
-# MCP Agent with Excel and Email Integration
+# MCP Agent with Excel and Email Integration with using Chain-of-Thought (CoT) Prompting which satisfy prompt_of_prompts.md
 
 This project implements an intelligent agent that can solve mathematical problems, display results in Microsoft Excel, and send screenshots via email MCP. It uses the MCP (Model Control Protocol) framework to connect a client with a server that provides various mathematical and utility tools.
 
@@ -18,67 +18,7 @@ This project implements an intelligent agent that can solve mathematical problem
 - `mcp_client.py`: The client component that communicates with the server and uses Gemini AI to solve problems.
 - `*.log`: Log files generated during execution.
 
-## Usage
-
-1. Run the client:
-   ```
-   python mcp_client.py
-   ```
-
-2. The agent will:
-   - Solve the mathematical problem
-   - Open Excel
-   - Merge the cells and create border to cell with thickness 4
-   - Add the answer as text in that cell in center of merged cell
-   - Take a screenshot of the Excel window
-   - Send the screenshot via email with the answer included in the message body# Final Result
-
-
-# MCP Agent with Excel and Email Integration
-
-This project implements an intelligent agent that can solve mathematical problems, display results in Microsoft Excel, and send screenshots via email MCP. It uses the MCP (Model Control Protocol) framework to connect a client with a server that provides various mathematical and utility tools.
-
-## Features
-
-- **Mathematical Operations**: Perform various mathematical calculations including addition, subtraction, multiplication, division, power, square root, cube root, factorial, log, remainder, trigonometric functions, and more.
-- **Excel Integration**: Automatically open Microsoft Excel,Merge the cells and create border to cell with thickness 4, and add text to visualize results.
-- **Email Functionality**: Take screenshots of the Excel window and send them via email with the results included in the message body.
-- **Logging**: Comprehensive logging of all operations for debugging and tracking.
-- **Gemini AI Integration**: Uses Google's Gemini AI model for intelligent problem-solving.
-
-## Project Structure
-
-- `mcp_server.py`: The server component that provides tools for mathematical operations, Excel manipulation, and email sending.
-- `mcp_client.py`: The client component that communicates with the server and uses Gemini AI to solve problems.
-- `*.log`: Log files generated during execution.
-
-## Usage
-
-1. Run the client:
-   ```
-   python mcp_client.py
-   ```
-
-2. The agent will:
-   - Solve the mathematical problem
-   - Open Excel
-   - Merge the cells
-   - Add the answer as text in that cell
-   - Take a screenshot of the Excel window
-   - Send the screenshot via email with the answer included in the message body# Final Result
-
-3. Check the log file for detailed information about the execution and iteration of the llm.
-
-## Customization
-
-### Changing the Query
-
-You can modify the query in `mcp_client.py` to solve different mathematical problems:
-
-```python
-query = """Find the ASCII values of characters in Banglore and then return sum of exponentials of those values. After getting the final answer, open Excel, merge the cell , add the answer as text, and send a screenshot of the Excel window via email to tanjirofake2002@gmail.com."""
-```
-# Now the new edited prompt 
+# Now the new edited prompt which satisfy 
 
 1. Old prompt 
 ```python
@@ -224,5 +164,67 @@ FINAL_ANSWER: done"""
   "overall_clarity": "Excellent structure and detailed instructions covering most aspects of structured reasoning and tool use."
 }
 ```
+
+## Usage
+
+1. Run the client:
+   ```
+   python mcp_client.py
+   ```
+
+2. The agent will:
+   - Solve the mathematical problem
+   - Open Excel
+   - Merge the cells and create border to cell with thickness 4
+   - Add the answer as text in that cell in center of merged cell
+   - Take a screenshot of the Excel window
+   - Send the screenshot via email with the answer included in the message body# Final Result
+
+
+# MCP Agent with Excel and Email Integration
+
+This project implements an intelligent agent that can solve mathematical problems, display results in Microsoft Excel, and send screenshots via email MCP. It uses the MCP (Model Control Protocol) framework to connect a client with a server that provides various mathematical and utility tools.
+
+## Features
+
+- **Mathematical Operations**: Perform various mathematical calculations including addition, subtraction, multiplication, division, power, square root, cube root, factorial, log, remainder, trigonometric functions, and more.
+- **Excel Integration**: Automatically open Microsoft Excel,Merge the cells and create border to cell with thickness 4, and add text to visualize results.
+- **Email Functionality**: Take screenshots of the Excel window and send them via email with the results included in the message body.
+- **Logging**: Comprehensive logging of all operations for debugging and tracking.
+- **Gemini AI Integration**: Uses Google's Gemini AI model for intelligent problem-solving.
+
+## Project Structure
+
+- `mcp_server.py`: The server component that provides tools for mathematical operations, Excel manipulation, and email sending.
+- `mcp_client.py`: The client component that communicates with the server and uses Gemini AI to solve problems.
+- `*.log`: Log files generated during execution.
+
+## Usage
+
+1. Run the client:
+   ```
+   python mcp_client.py
+   ```
+
+2. The agent will:
+   - Solve the mathematical problem
+   - Open Excel
+   - Merge the cells
+   - Add the answer as text in that cell
+   - Take a screenshot of the Excel window
+   - Send the screenshot via email with the answer included in the message body# Final Result
+
+3. Check the log file for detailed information about the execution and iteration of the llm.
+
+## Customization
+
+### Changing the Query
+
+You can modify the query in `mcp_client.py` to solve different mathematical problems:
+
+```python
+query = """Find the ASCII values of characters in Banglore and then return sum of exponentials of those values. After getting the final answer, open Excel, merge the cell , add the answer as text, and send a screenshot of the Excel window via email to tanjirofake2002@gmail.com."""
+```
+
    
 
